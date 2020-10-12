@@ -1,3 +1,3 @@
-# myJenkinsLib
+# mySandboxRepo
 
-This is a small exercise of the jenkins shared library
+This is a sandbox repository to test something that requires git

@@ -20,8 +20,8 @@
 	</scm>
 
 	<build>
-		<plugins>
-			<pluginManagement>
+		<pluginManagement>
+			<plugins>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-release-plugin</artifactId>
@@ -36,8 +36,8 @@
 						</checkModificationExcludeList>
 					</configuration>
 				</plugin>
-			</pluginManagement>
-		</plugins>
+			</plugins>
+		</pluginManagement>
 	</build>
 	<profiles>
 		<profile>

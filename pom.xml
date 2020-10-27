@@ -31,9 +31,9 @@
 						<autoVersionSubmodules>true</autoVersionSubmodules>
 						<preparationGoals>clean validate</preparationGoals>
 						<completionGoals>-Phelm-release clean validate scm:add scm:checkin</completionGoals>
-						<checkModificationExcludeList>
-							<checkModificationExcludes>test.txt</checkModificationExcludes>
-						</checkModificationExcludeList>
+						<checkModificationExcludes>
+							<checkModificationExcludeList>test.txt</checkModificationExcludeList>
+						</checkModificationExcludes>
 					</configuration>
 				</plugin>
 			</plugins>

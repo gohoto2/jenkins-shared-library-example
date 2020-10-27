@@ -21,17 +21,22 @@
 
 	<build>
 		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-release-plugin</artifactId>
-				<version>3.0.0-M1</version>
-				<configuration>
-					<tagNameFormat>v@{project.version}</tagNameFormat>
-					<autoVersionSubmodules>true</autoVersionSubmodules>
-					<preparationGoals>-Phelm-release clean scm:add scm:checkin -DpushChanges=false</preparationGoals>
-					<completionGoals>-Phelm-release clean scm:add scm:checkin</completionGoals>
-				</configuration>
-			</plugin>
+			<pluginManagement>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-release-plugin</artifactId>
+					<version>3.0.0-M1</version>
+					<configuration>
+						<tagNameFormat>v@{project.version}</tagNameFormat>
+						<autoVersionSubmodules>true</autoVersionSubmodules>
+						<preparationGoals>clean validate</preparationGoals>
+						<completionGoals>-Phelm-release clean validate scm:add scm:checkin</completionGoals>
+						<checkModificationExcludeList>
+							<checkModificationExcludes>test.txt</checkModificationExcludes>
+						</checkModificationExcludeList>
+					</configuration>
+				</plugin>
+			</pluginManagement>
 		</plugins>
 	</build>
 	<profiles>

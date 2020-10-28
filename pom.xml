@@ -4,7 +4,7 @@
 
     <groupId>org.example</groupId>
     <artifactId>groovy-httpbuilder</artifactId>
-    <version>1.4.0-SNAPSHOT</version>
+    <version>1.4.0</version>
 
     <properties>
         <jdk.version>8</jdk.version>
@@ -17,7 +17,8 @@
 
 	<scm>
 		<developerConnection>scm:git:https://github.com/gohoto2/mySandboxRepo.git</developerConnection>
-	</scm>
+	  <tag>v1.4.0</tag>
+  </scm>
 
 	<build>
 		<pluginManagement>

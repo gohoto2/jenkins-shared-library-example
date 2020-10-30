@@ -20,6 +20,7 @@
   </properties>
 
   <scm>
+    <connection>scm:git:https://github.com/gohoto2/mySandboxRepo.git</connection>
     <developerConnection>scm:git:https://github.com/gohoto2/mySandboxRepo.git</developerConnection>
     <tag>HEAD</tag>
   </scm>
@@ -33,11 +34,8 @@
           <version>3.0.0-M1</version>
           <configuration>
             <tagNameFormat>v@{project.version}</tagNameFormat>
-            <completionGoals>-Phelm-release scm:add scm:checkin</completionGoals>
             <autoVersionSubmodules>true</autoVersionSubmodules>
-            <checkModificationExcludes>
-              <checkModificationExcludeList>release.txt</checkModificationExcludeList>
-            </checkModificationExcludes>
+            <pushChanges>false</pushChanges>
           </configuration>
         </plugin>
         <plugin>
@@ -51,22 +49,4 @@
       </plugins>
     </pluginManagement>
   </build>
-  <profiles>
-    <profile>
-      <id>helm-release</id>
-      <build>
-        <plugins>
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-scm-plugin</artifactId>
-            <configuration>
-              <basedir>${project.basedir}</basedir>
-              <includes>release.txt</includes>
-              <message>[maven-release-plugin] Helm Release</message>
-            </configuration>
-          </plugin>
-        </plugins>
-      </build>
-    </profile>
-  </profiles>
 </project>

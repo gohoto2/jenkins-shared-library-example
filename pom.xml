@@ -43,7 +43,7 @@
           <artifactId>maven-scm-plugin</artifactId>
           <version>1.11.2</version>
           <configuration>
-            <includes>**/pom.xml</includes>
+            <includes>**/pom.xml, helm/test/test.yaml</includes>
           </configuration>
         </plugin>
       </plugins>
